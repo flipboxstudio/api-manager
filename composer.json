@@ -1,0 +1,22 @@
+{
+    "name": "flipboxstudio/api-manager",
+    "description": "Generator Laravel api resource",
+    "require": {
+        "php": "7.0.*",
+        "laravel/laravel": "5.3.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Flipbox\\ApiManager\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Denma Syarikin",
+            "email": "denmasyarikin@gmail.com"
+        }
+    ],
+
+    "license": "MIT",
+    "minimum-stability": "dev"
+}
