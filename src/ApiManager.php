@@ -158,7 +158,11 @@ class ApiManager
     public function getNamespacePath()
     {
         $namespaces = explode('\\', $this->config['namespace']);
-        $baseDir = base_path(implode('/', $namespaces));
+        
+        $baseDir = base_path(implode('/', array_map(function(&$val){
+            if ($val === 'App') return 'app';
+            return $val;
+        }, $namespaces)));
 
         if (! $this->files->exists($baseDir)) {
             $this->files->makeDirectory($baseDir);
