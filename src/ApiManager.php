@@ -245,7 +245,7 @@ class ApiManager
      */
     public function getNamespace($version, $type='Controllers')
     {
-        return $this->config['namespace'] . '\\' . $version .'\\'. $type;
+        return $this->config['namespace'] . '\\' . $version .'\\'. ucwords($type);
 	}
 
 	/**
